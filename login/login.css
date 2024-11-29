@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #eaf7e2;
+}
+
+
+.main-login {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.left-login h1 {
+    font-size: 3.5rem;
+    color: #0c473c;
+    margin-top: 80px;
+}
+
+.left-login .highlight {
+    color: #15cf4d;
+    font-weight: 700; 
+}
+
+.left-login-image {
+    width: 80%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.right-login {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 80%;
+    padding: 40px;
+    background: #17380d;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.card-login h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.textfield {
+    margin: 15px 0;
+    color: #fff;
+}
+
+.textfield label {
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.textfield input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.textfield input::placeholder {
+    color: #858585;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: #15cf4d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 18px;
+    text-decoration: none;
+    width: 100%;  
+    display: inline-block;
+}
+
+.btn-login:hover {
+    background: #0e9e3c;
+    transform: scale(1.05);
+}
+
+.extra-links {
+    margin-top: 15px;
+}
+
+.extra-links a {
+    color: #15cf4d;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.form-link {
+    color: #15cf4d;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-content .close-modal:hover {
+    color: #15cf4d;
+}
+
+#forgot-password-link {
+    margin-left: 510px;
+}
+
+/* --------------------- ESTILO DO FOOTER ---------------------------- */
+main {
+    min-height: calc(100vh - 100px); /* Faz o conteúdo ocupar a altura restante */
+    padding-bottom: 100px; /* Espaço para o footer */
+}
+
+/* Estilo do footer */
+footer {
+    width: 100%;
+    background: #17380d;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* As caixas dentro do footer */
+footer .boxs {
+    flex: 1;
+    min-width: 150px;
+    padding: 5px;
+}
+
+.boxs h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 1.5px solid #15cf4d;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.boxs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.boxs ul li {
+    margin: 7px 0;
+}
+
+.boxs ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.boxs ul li a:hover {
+    color: #15cf4d;
+}
+
+.boxs p {
+    color: #fff;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Definindo o estilo do footer social */
+.social {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: #15cf4d;
+}
+

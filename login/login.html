@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horto Manage | Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="icon" type="image/png" href="./img/logo_folha.jpg">
+</head>
+
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Horto Manage<br><span class="highlight">Plantando o Futuro</span></h1>
+            <img src="./img/plantas.svg" class="left-login-image" alt="Plantas">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <div class="side-by-side">
+                        <span class="form-label">Usuário</span>
+                    </div>
+                    <input type="text" name="usuario" placeholder="Digite seu usuário">
+                </div>
+                <div class="textfield">
+                    <div class="side-by-side">
+                        <span class="form-label">Senha</span>
+                    </div>
+                    <input type="password" name="senha" placeholder="Digite sua senha">
+                </div>
+                <div><span class="form-link" id="forgot-password-link">Esqueceu a senha?</span></div>
+                <a href="./home.html" class="btn-login">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="forgot-password-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p>
+                Caso tenha esquecido sua senha, por favor, entre em contato conosco para realizar a redefinição.
+                Você pode nos contatar através do e-mail: <strong>hortomanage@gmail.com</strong> ou pelo WhatsApp:
+                <strong>(34) 9992-4953</strong>.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona os elementos do DOM
+            const modal = document.getElementById('forgot-password-modal');
+            const openModalLink = document.getElementById('forgot-password-link');
+            const closeModalButton = document.querySelector('.close-modal');
+
+            // Abre o modal ao clicar no link
+            openModalLink.addEventListener('click', () => {
+                modal.style.display = 'flex'; // Torna o modal visível
+            });
+
+            // Fecha o modal ao clicar no botão "x"
+            closeModalButton.addEventListener('click', () => {
+                modal.style.display = 'none'; // Esconde o modal
+            });
+
+            // Fecha o modal ao clicar fora da área do modal
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
